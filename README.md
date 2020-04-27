@@ -1,21 +1,21 @@
-# tslint-staged
+# TSLint-Staged
 
-Run tsLint against **staged git files only** !
+Run **[TSLint](https://github.com/palantir/tslint)** against **staged git files only** !
 
 Used as git hook, it will run fast by not running on all of your project files !
 
 ## Important note !!!
 
-TsLint will be **depreciated** in a near future to move to **esLint** !
+TSLint will be **depreciated** in a near future to move to **ESLint** !
 
-**[Lint-staged](https://github.com/okonet/lint-staged)** will gives you the same feature and more for esLint or if you already use **Prettier**.
+**[Lint-staged](https://github.com/okonet/lint-staged)** gives you the same feature and more for ESLint and **[Prettier](https://github.com/prettier/prettier)**.
 
 ## Install & configuration
 ```sh
 npm install --save-dev tslint-staged
 ```
 
-`tslint-staged` configuration holds directly in your `package.json` :
+TSLint-Staged configuration holds directly in your `package.json` :
 ```js
 {
   ...,
@@ -29,11 +29,16 @@ npm install --save-dev tslint-staged
 ```
 `tslint_config` specify the path of your own `tslint.json` configuration file.
 
-`include` and `exclude` leave you filter analysed files. `tslint-staged` uses [micromatch](https://github.com/micromatch/micromatch) for matching files. You can use wild cards as `*`, `**` and more !
+`include` and `exclude` allow you to filter analysed files. TSLint-Staged uses [micromatch](https://github.com/micromatch/micromatch) for matching files. You can use wild cards as `*`, `**` and more !
+
+You can now run TSLint-Staged :
+```bash
+npm run tslint-staged
+```
 
 ## Use it as a hook with [Husky](https://github.com/typicode/husky)
 
-The most usefull way to use `tslint-staged` is linked as a pre-commit/pre-push hook !
+The most usefull way to use TSLint-staged is to use it as a pre-commit/pre-push hook !
 
 ```js
 {
