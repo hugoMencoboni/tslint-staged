@@ -1,0 +1,52 @@
+{
+  "name": "tslint-staged",
+  "version": "0.1.0",
+  "description": "Run tslint on your staged files only !",
+  "license": "MIT",
+  "homepage": "https://github.com/hugoMencoboni/tslint-staged#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugoMencoboni/tslint-staged.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hugoMencoboni/tslint-staged/issues"
+  },
+  "keywords": [
+    "tslint",
+    "staged",
+    "hook",
+    "git"
+  ],
+  "author": "Hugo Mencoboni",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "bin": {
+    "tslint-staged": "bin/tslint-staged"
+  },
+  "scripts": {
+    "run": "node lib/index.js",
+    "build": "del-cli lib && tsc"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "tslintStaged": {
+    "tslintConfig": "tslint.json",
+    "include": [
+      "**/*.ts"
+    ],
+    "exclude": []
+  },
+  "dependencies": {
+    "@jsdevtools/file-path-filter": "^3.0.1",
+    "path-list-to-tree": "^1.1.1",
+    "read-pkg-up": "^7.0.1",
+    "simple-git": "^1.132.0",
+    "tslint": "~6.1.0",
+    "typescript": "~3.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.2",
+    "del-cli": "^3.0.0"
+  }
+}
