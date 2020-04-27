@@ -19,6 +19,8 @@ async function tslintGitDiff(): Promise<void> {
                 process.exit(1);
             }
         }
+    } else if (stagedFiles.length) {
+        console.log('tslint-staged: no file to analyse.');
     }
 }
 

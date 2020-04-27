@@ -1,6 +1,6 @@
 {
   "name": "tslint-staged",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Run tslint on your staged files only !",
   "license": "MIT",
   "homepage": "https://github.com/hugoMencoboni/tslint-staged#readme",
